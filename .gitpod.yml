@@ -33,6 +33,10 @@ tasks:
     command: |
       gp sync-await cp-demo
       ./scripts/create-ccloud-workflow.sh
+      sleep 3000 # Let demo run for 50 minutes before tearing down ccloud environment
+      source ./ccloud_library.sh
+      source delta_configs/env.delta
+      ccloud::destroy_ccloud_stack $SERVICE_ACCOUNT_ID
 
 vscode:
   extensions:
