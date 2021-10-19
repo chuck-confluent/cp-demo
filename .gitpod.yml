@@ -29,7 +29,7 @@ tasks:
       fi
       gp sync-done cp-demo
 
-  - name: Automate ccloud workflow
+  - name: hybrid cloud
     command: |
       gp sync-await cp-demo
       ./scripts/create-ccloud-workflow.sh
